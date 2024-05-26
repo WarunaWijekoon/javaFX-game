@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.game_3.controller.ViewController">
+   <children>
+      <ImageView fitHeight="614.0" fitWidth="1510.0" layoutX="248.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/bg2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView layoutY="32.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="2.0">
+         <image>
+            <Image url="@../image/img.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Label fx:id="lblHeroMan" layoutX="500.0" layoutY="300.0">
+         <graphic>
+            <ImageView accessibleRole="PARENT" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/XYik.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblDragon1" layoutX="1139.0" layoutY="250.0" prefHeight="185.0" prefWidth="294.0">
+         <graphic>
+            <ImageView fitHeight="214.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/dragon2.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblDragon2" layoutX="-198.0" layoutY="248.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/dragon.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <ButtonBar layoutX="397.0" layoutY="59.0" prefHeight="40.0" prefWidth="275.0">
+<!--        <buttons>-->
+<!--          <Button mnemonicParsing="false" onAction="#btnStartOnAction" text="Start" />-->
+<!--            <Button mnemonicParsing="false" onAction="#btnPauseOnAction" text="Pause" />-->
+<!--            <Button mnemonicParsing="false" onAction="#btnExitOnAction" text="Exit" />-->
+<!--        </buttons>-->
+      </ButtonBar>
+      <Group layoutX="1115.0" layoutY="100.0">
+         <children>
+            <ImageView fitHeight="195.0" fitWidth="205.0" layoutX="26.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/pngtree-warning-popup-gamer-design-png-image_6591316.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblScore" layoutX="54.0" layoutY="-10.0" prefHeight="67.0" prefWidth="150.0" style="-fx-background-color: none;" textAlignment="CENTER" textFill="#201de8">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="56.0" />
+               </font>
+               <effect>
+                  <Blend opacity="0.36" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblDeath" layoutX="-163.0" layoutY="-12.0" prefHeight="95.0" prefWidth="191.0" style="-fx-background-color: none;" text=" DEATH" textFill="#07071a">
+               <font>
+                  <Font name="Dhurjati" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Label layoutX="74.0" layoutY="87.0" text="SCORE" textFill="#07071a">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblScore1" layoutX="224.0" layoutY="85.0" prefHeight="49.0" prefWidth="39.0" textFill="#650404">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblArrowKEy" layoutX="360.0" layoutY="191.0" text="PRESS SPACE">
+         <font>
+            <Font name="System Bold Italic" size="56.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label fx:id="lblFailGame" layoutX="374.0" layoutY="225.0" prefHeight="335.0" prefWidth="413.0" text="PRESS ESC TO EXIT">
+         <graphic>
+            <ImageView fitHeight="218.0" fitWidth="396.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/img_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Group fx:id="lblVictory" layoutX="314.0" layoutY="175.0">
+         <children>
+            <Label fx:id="ecv" layoutX="58.0" layoutY="52.0" prefHeight="288.0" prefWidth="556.0" text="                                                            ghh                                                                                              " />
+            <ImageView fitHeight="297.0" fitWidth="1047.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/img_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Label fx:id="lblWinExit" layoutX="295.0" layoutY="533.0" text="PRESS ENTER TO EXIT">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7368420958518982" green="0.3820662796497345" blue="0.3820662796497345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</AnchorPane>
